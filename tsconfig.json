@@ -1,6 +1,17 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "module": "es2020",
+    "paths": {
+      "react-native-vector-icons/MaterialCommunityIcons": [
+        "./react-native-vector-icons/MaterialCommunityIcons.js"
+      ]
+    },
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ]
   }
 }

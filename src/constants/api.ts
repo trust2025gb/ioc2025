@@ -1,0 +1,111 @@
+/**
+ * API端点常量
+ */
+
+export const API_ENDPOINTS = {
+  AUTH: {
+    LOGIN: '/api/auth/login',
+    REGISTER: '/api/auth/register',
+    LOGOUT: '/api/auth/logout',
+    REFRESH_TOKEN: '/api/auth/refresh-token',
+    PROFILE: '/api/auth/profile',
+  },
+  USERS: {
+    BASE: '/api/users',
+    DETAIL: (id: string) => `/api/users/${id}`,
+    UPDATE_PROFILE: '/api/users/profile',
+    CHANGE_PASSWORD: '/api/users/change-password',
+  },
+  PRODUCTS: {
+    BASE: '/api/products',
+    CATEGORIES: '/api/products/categories',
+    DETAIL: (id: string) => `/api/products/${id}`,
+    COMPARE: '/api/products/compare',
+    FEATURED: '/api/products/featured',
+  },
+  LEADS: {
+    BASE: '/api/leads',
+    DETAIL: (id: string) => `/api/leads/${id}`,
+    ASSIGN: (id: string) => `/api/leads/${id}/assign`,
+    CONVERT: (id: string) => `/api/leads/${id}/convert`,
+    RECENT: '/api/leads/recent',
+    STATISTICS: '/api/leads/statistics',
+  },
+  ORDERS: {
+    BASE: '/api/orders',
+    DETAIL: (id: string) => `/api/orders/${id}`,
+    STATUS: (id: string) => `/api/orders/${id}/status`,
+    PAYMENT: (id: string) => `/api/orders/${id}/payment`,
+    STATISTICS: '/api/orders/statistics',
+  },
+  CUSTOMERS: {
+    BASE: '/api/customers',
+    DETAIL: (id: string) => `/api/customers/${id}`,
+    UPDATE: (id: string) => `/api/customers/${id}/update`,
+    POLICIES: (id: string) => `/api/customers/${id}/policies`,
+    CLAIMS: (id: string) => `/api/customers/${id}/claims`,
+    ORDERS: (id: string) => `/api/customers/${id}/orders`,
+    STATISTICS: '/api/customers/statistics',
+    IMPORT: '/api/customers/import',
+    EXPORT: '/api/customers/export',
+  },
+  CONTRACTS: {
+    BASE: '/api/contracts',
+    DETAIL: (id: string) => `/api/contracts/${id}`,
+    SIGN: (id: string) => `/api/contracts/${id}/sign`,
+    DOCUMENTS: (id: string) => `/api/contracts/${id}/documents`,
+    TERMINATE: (id: string) => `/api/contracts/${id}/terminate`,
+    RENEW: (id: string) => `/api/contracts/${id}/renew`,
+    TEMPLATES: '/api/contracts/templates',
+    STATISTICS: '/api/contracts/statistics',
+    EXPORT: '/api/contracts/export',
+    BY_CUSTOMER: (customerId: string) => `/api/customers/${customerId}/contracts`,
+    BY_ORDER: (orderId: string) => `/api/orders/${orderId}/contract`,
+  },
+  CLAIMS: {
+    BASE: '/api/claims',
+    DETAIL: (id: string) => `/api/claims/${id}`,
+    DOCUMENTS: (id: string) => `/api/claims/${id}/documents`,
+    STATUS: (id: string) => `/api/claims/${id}/status`,
+  },
+  PLANS: {
+    BASE: '/api/plans',
+    DETAIL: (id: string) => `/api/plans/${id}`,
+    CUSTOMIZE: (id: string) => `/api/plans/${id}/customize`,
+  },
+  CHATS: {
+    BASE: '/api/chats',
+    DETAIL: (id: string) => `/api/chats/${id}`,
+    MESSAGES: (id: string) => `/api/chats/${id}/messages`,
+    PARTICIPANTS: (id: string) => `/api/chats/${id}/participants`,
+  },
+  DASHBOARD: {
+    SUMMARY: '/api/dashboard/summary',
+    STATISTICS: '/api/dashboard/statistics',
+    ACTIVITIES: '/api/dashboard/activities',
+    DATA: '/api/dashboard/data',
+  },
+  NOTIFICATIONS: {
+    BASE: '/api/notifications',
+    UNREAD_COUNT: '/api/notifications/unread-count',
+    MARK_READ: (id: string) => `/api/notifications/${id}/read`,
+    MARK_ALL_READ: '/api/notifications/read-all',
+    REGISTER_TOKEN: '/api/device-tokens',
+    UNREGISTER_TOKEN: (token: string) => `/api/device-tokens/${token}`,
+    WEBPUSH_PUBLIC_KEY: '/api/notifications/webpush/public-key',
+    WEBPUSH_SUBSCRIBE: '/api/notifications/webpush/subscribe',
+    WEBPUSH_UNSUBSCRIBE: '/api/notifications/webpush/unsubscribe',
+    PREFERENCES: {
+      SHOW: '/api/notifications/preferences',
+      UPDATE: '/api/notifications/preferences',
+    },
+  },
+  SETTINGS: {
+    SHOW: '/api/settings',
+    UPDATE: '/api/settings',
+  },
+  CMS: {
+    SHOW: (slug: string) => `/api/cms/${slug}`,
+    UPDATE: (slug: string) => `/api/cms/${slug}`,
+  },
+}; 

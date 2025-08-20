@@ -1,0 +1,1 @@
+export { MaterialCommunityIcons as default } from '@expo/vector-icons'; 
